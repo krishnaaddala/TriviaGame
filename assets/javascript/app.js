@@ -23,15 +23,19 @@ $("#startGame").on("click", startTrivia);
 function startTrivia(){
     startGame = setInterval(timeRemaining, 1000);
 
-}
+};
 function timeRemaining(){
     remaningTime--;
+    $("#timeRemaining").html("<h2>"+remaningTime+"</h2>");
     if (remaningTime === 0){
         gameCompleted();
     }
-}
+};
 function gameCompleted(){
     correctAnswers+=numOfCorrectAnswered;
     incorrectAnswers+=numOfIncorrectAnswered;
     unAnswered+=numOfUnanswered;
-}
+};
+function answers(){
+    
+};
