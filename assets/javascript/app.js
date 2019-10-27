@@ -7,3 +7,31 @@
 // repeat this for the set of 10 questions
 // if the timer runs out, end the game and diplay the number or correct and incorrect answers
 // without page refresh we have a reset game function that we display and upon click of that we reset the game
+var remaningTime = 30;
+//this var is to hold the start game functionality
+var startGame;
+//this var is to hold the game completed functionality
+var gameCompleted;
+var correctAnswers = 0;
+var incorrectAnswers = 0;
+var unAnswered = 0;
+var numOfCorrectAnswered;
+var numOfInCorrectAnswered;
+var numOfUnanswered;
+$("#startGame").on("click", startTrivia);
+
+function startTrivia(){
+    startGame = setInterval(timeRemaining, 1000);
+
+}
+function timeRemaining(){
+    remaningTime--;
+    if (remaningTime === 0){
+        gameCompleted();
+    }
+}
+function gameCompleted(){
+    correctAnswers+=numOfCorrectAnswered;
+    incorrectAnswers+=numOfIncorrectAnswered;
+    unAnswered+=numOfUnanswered;
+}
