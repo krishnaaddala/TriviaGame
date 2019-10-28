@@ -22,15 +22,15 @@ Chrome browser
 
 ## Screenshots of homework progress
 
-![Code progression Final](https://github.com/krishnaaddala/TriviaGame/blob/master/assets/images/triviaGameStart.png"Trivia Game Start")
+![Code progression Final](https://github.com/krishnaaddala/TriviaGame/blob/master/assets/images/triviaGameStart.png "Trivia Game Start")
 
-![Code progression Final](https://github.com/krishnaaddala/TriviaGame/blob/master/assets/images/triviaQuiz.png"Trivia Quiz section")
+![Code progression Final](https://github.com/krishnaaddala/TriviaGame/blob/master/assets/images/triviaQuiz.png "Trivia Quiz section")
 
-![Code progression Final](https://github.com/krishnaaddala/TriviaGame/blob/master/assets/images/finalDoneImage.png"Final Done Trivia Page")
+![Code progression Final](https://github.com/krishnaaddala/TriviaGame/blob/master/assets/images/finalDoneImage.png "Final Done Trivia Page")
 
 ## Gif walkthrough
 
-![](name-of-giphy.gif)
+![](triviaGame.gif)
 
 ## Code Snippets
 
