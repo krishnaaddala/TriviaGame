@@ -22,12 +22,15 @@ Chrome browser
 
 ## Screenshots of homework progress
 
-![Code progression Final](https://github.com/krishnaaddala/HW_Wireframe/blob/master/Images_CodingProgress/HW_Wireframe_progress1.png?raw=true "Code Porgress 1")
+![Code progression Final](https://github.com/krishnaaddala/TriviaGame/blob/master/assets/images/triviaGameStart.png"Trivia Game Start")
 
-![Code progression Final](https://github.com/krishnaaddala/HW_Wireframe/blob/master/Images_CodingProgress/HW_Wireframe_progress2.png?raw=true "Code Porgress 2")
+![Code progression Final](https://github.com/krishnaaddala/TriviaGame/blob/master/assets/images/triviaQuiz.png"Trivia Quiz section")
 
-![Code progression Final](https://github.com/krishnaaddala/HW_Wireframe/blob/master/Images_CodingProgress/HW_Wireframe_Final.png?raw=true "Code Porgress final")
+![Code progression Final](https://github.com/krishnaaddala/TriviaGame/blob/master/assets/images/finalDoneImage.png"Final Done Trivia Page")
 
+## Gif walkthrough
+
+![](name-of-giphy.gif)
 
 ## Code Snippets
 
