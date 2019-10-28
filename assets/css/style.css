@@ -6,6 +6,14 @@ background-position: center;
   background-size: cover;
 }
 .card{
-    background-color: lightblue; 
+    background-color: skyblue; 
+}
+.btn-primary{
+    margin-top: 100px;
+    text-align: center;
+    margin-left: 105px;
+    background-color: transparent;
+    width: 70%;
+    height: 90px;
 }
 
