@@ -1,16 +1,11 @@
 // Trivia questions and answer are set to 10
-// set a default times for each question or for the entire set of trivia questions to 30 seconds
-// create a question with a h2 or h3 tag and display that question
-// create buttons for each of the questions which on click should do an action
-// create an on click jquery function on that, upon click we compare the right answer  
+// set a default timer for all questions to 30 seconds
+// create radio buttons for each of the questions which on click should do an action
 //upon correct or wrong answers increment the correct answers by one or the incorrect answer by 1
 // repeat this for the set of 10 questions
 // if the timer runs out, end the game and diplay the number or correct and incorrect answers
-// without page refresh we have a reset game function that we display and upon click of that we reset the game
-// $( document ).ready(function() {
-//     var remaningTime = 30;
-//     timeRemaining();
-// });
+
+//global triviaQuestions variable defined as an object with keyValue pairs
 var triviaQuestions = [{
     question: "Superman makes his first appearance in 'Action Comics' #1, Vol. 1. What is the cover date (month and year)?",
     answerArr: ["1937", "1939", "1938", "1940"],
@@ -62,48 +57,17 @@ var triviaQuestions = [{
     correctChoice: "The Thing"
 }
 ];
-//this var is to hold the start game functionality
-var startGame;
-//this var is to hold the game completed functionality
-var gameCompleted;
+
+//variables to define at a global scope for the game and increment each of the vars to display on the HTML page
 var correctAnswers = 0;
 var incorrectAnswers = 0;
 var unAnswered = 0;
-var numOfCorrectAnswered = 0;
-var numOfInCorrectAnswered = 0;
-var numOfUnanswered = 0;
-var userChoice;
-// $("#startGame").on("click", startTrivia);
-
-// function startTrivia() {
-//     $("#startGame").hide();
-//     startGame = setInterval(timeRemaining, 1000);
-
-// };
-// function timeRemaining() {
-//     remaningTime--;
-//     $("#timeRemaining").html("<h2>" + remaningTime + "</h2>");
-//     if (remaningTime <= 0) {
-//         gameCompleted();
-//     }
-// };
-// function gameCompleted() {
-//     remaningTime =0;
-//     $("#allDone").html("<h2> All Done! </h2>");
-//     // correctAnswers+=numOfCorrectAnswered;
-//     // incorrectAnswers+=numOfIncorrectAnswered;
-//     // unAnswered+=numOfUnanswered;
-// };
-// function answers() {
-//     for (i=0; i< triviaQuestions.length; i++){
-
-//     }
-// };
-var interval = 2;
-    function testTimer() {
+var interval = 30;
+//function using setInterval to decrement the timer by 1second when page is loaded
+    function setTimer() {
         setInterval(decrement, 1000);
     }
-
+//this function is called in the setTimer to display the 1second decrement on the HTML page
     function decrement() {
         if(interval >=0 ) {
             $("#timeRemaining").html("<h2>"+"Time Remaining: " + interval + "</h2>");
@@ -117,16 +81,19 @@ var interval = 2;
         interval--;
     }
 
+//function to check the right vs wrong answers in a loop from triviaQuestions var
 function checkAnswers(){
     for(var i = 0 ; i < triviaQuestions.length ; i++) {
 //storing radio buttons value in jQuery
         var elem = "input[name=answer" + (i+1) +"]:checked";
         increment($(elem).val(), triviaQuestions[i].correctChoice);
     }
+    //this queryString passes the answered vs incorrect vs unanswered values from above to the DoneTrivia HTML file
     var queryString = "?ans=" +correctAnswers +"&unans="+unAnswered+"&inAns="+incorrectAnswers;
     window.location.href = "DoneTrivia.html" + queryString;
 }
 
+//function compares the input value from the radio buttons vs correct value stored and increments the variables
 function increment(inputVal, correctVal){
 
     if(inputVal === correctVal) {
@@ -140,6 +107,8 @@ function increment(inputVal, correctVal){
     }
 
 }
+//gameCompleted function takes the queryString and using decode URI component removes the unnecessary tags on the query
+// and using split we split the queryString into a list of arrays and display the values on the DoneTrivia page
 function gameCompleted(){
 var queryString = decodeURIComponent(window.location.search);
     queryString = queryString.substring(1);

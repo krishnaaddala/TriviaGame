@@ -1,6 +1,6 @@
 body{
 height: auto;
-width: auto;
+width: 100%;
 background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -15,5 +15,15 @@ background-position: center;
     background-color: transparent;
     width: 70%;
     height: 90px;
+    font-size: 45px;
 }
+h1{
+    text-align: center;
+    font-weight: bold;
+    font-size: 260px;
 
+}
+br{
+    margin-top: 5px;
+    font-size: 10px;
+}
