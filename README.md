@@ -30,7 +30,7 @@ Chrome browser
 
 ## Gif walkthrough
 
-![](triviaGame.gif)
+![](https://github.com/krishnaaddala/TriviaGame/blob/master/assets/images/triviaGame.gif)
 
 ## Code Snippets
 
